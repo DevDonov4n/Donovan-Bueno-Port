@@ -8,7 +8,7 @@ function Header() {
         <header>
             <div className="container">
                 <div className="al-center d-flex jc-space-between">
-                    <Link to='/'><img src={Logo}/></Link>
+                    <h1>Donovan Bueno de Deus</h1>
                 </div>
             </div>
             <nav>
