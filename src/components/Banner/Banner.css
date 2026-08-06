@@ -4,13 +4,15 @@
 .banner-start{
     max-width: 1201px;
     width: 100%;
-    background-image: url(../../assets/banner.svg);
+    background-image: url(../../assets/image.png);
     background-repeat: no-repeat;
     background-size: cover;
     justify-self: center;
     border-radius: 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 32px;
+    margin-top: 4rem;
 }
+
 
 .banner-content{
     margin-left: 20px;
