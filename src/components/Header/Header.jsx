@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Logo from '../../assets/dnc-logo 1.svg'
 import '../Header/Header.css'
 
+
+
 function Header() {
     return (
         <header>
@@ -21,5 +23,15 @@ function Header() {
         </header>
     )
 }
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
 
 export default Header;
