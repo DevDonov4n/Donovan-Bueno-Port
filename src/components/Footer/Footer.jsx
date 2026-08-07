@@ -18,11 +18,31 @@ function Footer() {
                 <div className="footer-intro">
                     <img src={ Logo } width="60px" alt="" />
                     <p>A escola que prepara você para as profissões em alta no mercado de trabalho.</p>
-                    <div className='footer-icons'>
-                        <FaLinkedin color="#b300ff"/>
-                        <FaInstagram color="#b300ff"/>
-                        <FaGithub color="#b300ff"/>
-                    </div>
+                    <div className="footer-icons">
+    <a
+        href="https://linkedin.com/in/seu-perfil"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <FaLinkedin />
+    </a>
+
+    <a
+        href="https://instagram.com/seu-usuario"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <FaInstagram />
+    </a>
+
+    <a
+        href="https://github.com/seu-usuario"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <FaGithub />
+    </a>
+</div>
                 </div>
 
                 <div className="footer-pages">

@@ -1,36 +1,55 @@
 import { Link } from "react-router-dom";
-import '../Header/Header.css'
+import { useEffect, useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
+import "./Header.css";
 
 function Header() {
+    const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <header>
-            <div className="container">
-                <div className="al-center d-flex jc-space-between">
-                    <h1>Donovan Bueno de Deus</h1>
-                </div>
-            </div>
-            <nav>
-                <ul className="d-flex">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about'>Sobre </Link></li>
-                    <li><Link to='/projects'>Projetos </Link></li>
-                    <li><Link to='/contact'>Contato </Link></li>
-                </ul>
+        <header className={scrolled ? "scrolled" : ""}>
+
+            <h1>Donovan Bueno de Deus</h1>
+
+            {/* Menu Desktop */}
+            <nav className="desktop-nav">
+                <Link to="/">Home</Link>
+                <Link to="/about">Sobre</Link>
+                <Link to="/projects">Projetos</Link>
+                <Link to="/contact">Contato</Link>
             </nav>
+
+            {/* Botão Mobile */}
+            <button
+                className="menu-btn"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                {menuOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
+            </button>
+
+            {/* Menu Mobile */}
+            <nav className={`mobile-nav ${menuOpen ? "active" : ""}`}>
+                <Link onClick={() => setMenuOpen(false)} to="/">Home</Link>
+                <Link onClick={() => setMenuOpen(false)} to="/about">Sobre</Link>
+                <Link onClick={() => setMenuOpen(false)} to="/projects">Projetos</Link>
+                <Link onClick={() => setMenuOpen(false)} to="/contact">Contato</Link>
+            </nav>
+
         </header>
-    )
-
+    );
 }
-
 
 export default Header;

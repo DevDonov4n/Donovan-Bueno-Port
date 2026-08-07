@@ -6,6 +6,17 @@
     font-style: normal;
 }
 
+.menu-btn,
+.mobile-nav{
+    display:none;
+}
+
+.desktop-nav{
+    display:flex;
+    gap:2rem;
+    margin-right:3rem;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -66,16 +77,115 @@ nav a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
-    padding: 0 40px;
-    transition: 0.3s;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 28px;
+    border-radius: 35px;
+
+    transition: 
+        background-color .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
-nav a:hover{
+nav a:hover {
     color: #b300ff;
-    box-shadow: rgba(100, 100, 111, 0.15) 0px 6px 20px;
-    transform: translateY(-3px);
     background-color: #f8f8f8;
-    padding: 2rem 4rem;
-    font-size: 22px;
-    border-radius: 35px;
+    box-shadow: rgba(100, 100, 111, 0.15) 0px 6px 20px;
+    transform: translateY(-3px) scale(1.05);
+}
+
+@media (max-width:992px){
+
+    header{
+        justify-content:space-between;
+        padding:20px;
+    }
+
+    header h1{
+        font-size:28px;
+        margin-left:0;
+    }
+
+    .desktop-nav{
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        width:55px;
+        height:55px;
+
+        border:none;
+        border-radius:50%;
+
+        background:#fff;
+        color:#b300ff;
+
+        font-size:34px;
+
+        cursor:pointer;
+
+        z-index:1002;
+
+    }
+
+    .mobile-nav{
+
+        display:flex;
+        flex-direction:column;
+
+        position:fixed;
+
+        top:90px;
+        right:-300px;
+
+        width:230px;
+
+        padding:25px;
+
+        border-radius:30px;
+
+        background:#b300ff;
+
+        transition:.35s;
+
+        z-index:1001;
+
+    }
+
+    .mobile-nav.active{
+
+        right:20px;
+
+    }
+
+    .mobile-nav a{
+
+        background:#fff;
+
+        color:#000;
+
+        padding:16px;
+
+        margin:8px 0;
+
+        border-radius:999px;
+
+        text-align:center;
+
+        text-decoration:none;
+
+        font-weight:bold;
+
+    }
+
 }
