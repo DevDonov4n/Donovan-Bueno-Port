@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import './Header.js'
 import Logo from '../../assets/dnc-logo 1.svg'
 import '../Header/Header.css'
 
