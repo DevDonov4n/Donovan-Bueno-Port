@@ -16,8 +16,8 @@ function ProjectsGrid(){
         <>
         <section className="projects-section">
             <div className="projects-intro">
-                <h1 id='projects-title'>Follow Our Projects</h1>
-                <p id="projects-p">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+                <h1 id='projects-title'>Projetos Desenvolvidos</h1>
+                <p id="projects-p">Em minha caminhada, desde então venho realizando alguns projetos utilizando </p>
             </div>
             <div className="projects-grid d-flex jc-space-between container">
                 <div className="card-projects">

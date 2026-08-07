@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+*{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
 .banner-start{
     max-width: 1201px;
@@ -10,7 +15,7 @@
     justify-self: center;
     border-radius: 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 32px;
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 
 
@@ -21,11 +26,19 @@
 }
 
 #banner-h1{
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
     font-style: normal;
     font-size: 65px;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem;
+    border-radius: 40px;
+
 }
+
 
 #banner-btn{
     color: #FFFFFF;
@@ -43,6 +56,13 @@
     }
 }
 
-#banner-p{
+#banner-p {
     font-size: 22px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem;
+    border-radius: 40px;
+
+    text-align: center;
 }
