@@ -6,6 +6,24 @@
     font-style: normal;
 }
 
+.img-projects{
+    width:100%;
+    aspect-ratio:16/9;
+
+    object-fit:cover;
+
+    border-radius:20px 20px 0 0;
+
+    display:block;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+    margin: 50px auto;
+}
 
 #projects-title{
     font-family: "Space Grotesk", sans-serif;
@@ -29,46 +47,89 @@
 }
 
 .card-title{
-    font-family: "Space Grotesk", sans-serif;;
-    font-size: 25px;
-    font-weight: 800;
+    margin:15px 15px 0 10px;
+    font-size:24px;
+    font-weight:700;
+    text-align: start;
+}
+
+.card-projects p{
+    margin:10px 0 20px;
+    text-align:center;
 }
 
 .card-projects{
-    justify-items: center;
-    transition: 0.3s;
-    border-radius: 20px 20px 35px 35px;
-    & > p{
-       margin: 5px 0; 
-       font-size: 18px;
-    }
-    & > h3{
-        margin: 5px 0;
-    }
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    transition: .3s;
+
+    background: #fff;
+}
+
+.card-projects:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(100,100,111,.18) 0 10px 25px;
+}
+
+.card-btn{
+    background: #1D1D1D;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    width: fit-content;
+    align-self: center;
+
+    margin-bottom: 20px;
+    
+    text-align: center;
+    gap: 5px;
+
+    transition: .3s;
+
     &:hover{
-        box-shadow: rgba(100, 100, 111, 0.15) 0px 6px 20px;
         transform: translateY(-3px);
-        background-color: #f8f8f8;
-        
-        & > .like-projects{
-            background-color: #f8f8f8;
-        }
-        
+        background-color: #b300ff;
+        box-shadow: rgba(100,100,111,.18) 0 10px 25px;
     }
 }
 
-.like-projects{
-    background-image: url(../../assets/gostar\ 1.svg);
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: #ffff;
-    margin: 10px 45%;
-    transition: 0.3s;
-    &:hover{
-        background-image: url(../../assets/like_880605\ 1.svg);
-        cursor: pointer;
-        transform: translateY(-3px);
+@media (max-width:992px){
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
     }
+
+}
+
+@media (max-width:480px){
+
+    .projects-grid{
+        gap:18px;
+    }
+
+    #projects-title{
+        font-size:36px;
+    }
+
+    #projects-p{
+        font-size:18px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
 }

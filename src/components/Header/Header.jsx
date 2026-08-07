@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from '../../assets/dnc-logo 1.svg'
 import '../Header/Header.css'
-
-
 
 function Header() {
     return (
@@ -22,8 +19,8 @@ function Header() {
             </nav>
         </header>
     )
-}
 
+}
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {

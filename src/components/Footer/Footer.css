@@ -26,6 +26,7 @@ a {
     & > p {
         font-size: 22px;
         width: 50%;
+        margin-top: 20px;
     }
 
     & > .footer-icons{

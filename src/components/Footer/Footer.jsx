@@ -1,8 +1,10 @@
 import '../Footer/Footer.css';
-import Logo from '../../assets/dnc-logo 1.svg';
-import Linkedin from '../../assets/linkedin.svg';
-import Instagram from '../../assets/instagram.svg';
-import Twitter from '../../assets/twitter.svg';
+import Logo from '../../assets/image (3).png';
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
@@ -14,12 +16,12 @@ function Footer() {
             
             <section className="footer-info">
                 <div className="footer-intro">
-                    <img src={ Logo } alt="" />
+                    <img src={ Logo } width="60px" alt="" />
                     <p>A escola que prepara você para as profissões em alta no mercado de trabalho.</p>
                     <div className='footer-icons'>
-                        <img src={ Linkedin } alt="" />
-                        <img src={ Instagram } alt="" />
-                        <img src={ Twitter } alt="" />
+                        <FaLinkedin color="#b300ff"/>
+                        <FaInstagram color="#b300ff"/>
+                        <FaGithub color="#b300ff"/>
                     </div>
                 </div>
 
@@ -35,9 +37,8 @@ function Footer() {
 
                 <div className="footer-contact">
                     <h3 id='title-footer-contact'>Contato</h3>
-                    <p>R. Justino Cobra, 61 – Vila Ema | São José dos Campos – SP | CEP 12243-030</p>
-                    <p>suporte@escoladnc.com.br</p>
-                    <p>(19) 99187-4342</p>
+                    <p>donovanbueno456@gmail.com</p>
+                    <p>(11) 91474-0589</p>
                 </div>
 
             </section>

@@ -1,14 +1,15 @@
 import "../ProjectsGrid/ProjectsGrid.css"
-
+import { DiJsBadge } from "react-icons/di";
+import { FaReact } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { BsArrowUpRight } from "react-icons/bs";
 //ASSETS
-import ft1 from '../../assets/Photo (1).svg';
-import ft2 from '../../assets/Photo (2).svg';
-import ft3 from '../../assets/Photo (3).svg';
-import ft4 from '../../assets/Photo (4).svg';
-import ft5 from '../../assets/Photo (5).svg';
-import ft6 from '../../assets/Photo (6).svg';
-import ft7 from '../../assets/Photo (7).svg';
-import ft8 from '../../assets/Photo (8).svg';
+import theDevNews from "../../assets/the-dev-news.png";
+import boardTarefas from "../../assets/board-tarefas.png";
+import landingPageDNC from "../../assets/landing-page-dnc.png";
+import picExemplar from "../../assets/image.png";
+import toDoList from "../../assets/to-do-list.png";
 
 
 function ProjectsGrid(){
@@ -17,63 +18,59 @@ function ProjectsGrid(){
         <section className="projects-section">
             <div className="projects-intro">
                 <h1 id='projects-title'>Projetos Desenvolvidos</h1>
-                <p id="projects-p">Em minha caminhada, desde então venho realizando alguns projetos utilizando </p>
+                <p id="projects-p">Em minha caminhada, desde então venho realizando alguns projetos utilizando <DiJsBadge/>, <FaReact/>, <FaHtml5/> e <SiTypescript/>, e outras tecnologias.</p>
             </div>
-            <div className="projects-grid d-flex jc-space-between container">
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft1 } />
-                    <h3 className="card-title">Levi Cohen</h3>
-                    <p>New York, USA</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft2 } />
-                    <h3 className="card-title">Julia Souza</h3>
-                    <p>São Paulo, Brasil</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft3 } />
-                    <h3 className="card-title">João Silva</h3>
-                    <p>Belo Horizonte, Brasil</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft4 } />
-                    <h3 className="card-title">Nora Owen</h3>
-                    <p>Melbourne, Australia</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                
+            <section className="projects">
+    <div className="container">
+        
+
+        <div className="projects-grid">
+
+            <div className="card-projects">
+                <img src={theDevNews} className="img-projects" alt="" />
+                <h3 className="card-title">BLOG - The Dev News</h3>
+                <p>Uma landing page para o portal The Dev News, desenvolvida com HTML, CSS. O obejetivo deste projeto é apresentar as notícias do universo da programação de forma atrativa e informativa e responsiva.</p>
+                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
-            <br />
-            <div className="projects-grid d-flex jc-space-between container">
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft5 } />
-                    <h3 className="card-title">Sofia Carter</h3>
-                    <p>Los Angeles, USA</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft6 } />
-                    <h3 className="card-title">Pedro Alves</h3>
-                    <p>São Paulo, Brasil</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft7 } />
-                    <h3 className="card-title">Luana Rodriguez</h3>
-                    <p>Rio de Janeiro, Brasil</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                <div className="card-projects">
-                    <img className="img-projects" src={ ft8 } />
-                    <h3 className="card-title">Gianna	Mateo</h3>
-                    <p>New York, USA</p>
-                    <button className="like-projects" type="submit" href="/"></button>
-                </div>
-                
+
+            <div className="card-projects">
+                <img src={boardTarefas} className="img-projects" alt="" />
+                <h3 className="card-title">Board de Tarefas</h3>
+                <p>Um projeto de board de tarefas desenvolvido com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e componentização.</p>
+                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
+
+            <div className="card-projects">
+                <img src={landingPageDNC} className="img-projects" alt="" />
+                <h3 className="card-title">Landing Page - DNC</h3>
+                <p>Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto é apresentar os cursos e serviços da instituição de forma atrativa e informativa.</p>
+                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
+            </div>
+
+            <div className="card-projects">
+                <img src={toDoList} className="img-projects" alt="" />
+                <h3 className="card-title">To-Do List</h3>
+                <p>Uma lista de tarefas desenvolvida com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e código assíncrono.</p>
+                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
+            </div>
+
+            <div className="card-projects">
+                <img src={picExemplar} className="img-projects" alt="" />
+                <h3 className="card-title">Em Desenvolvimento...</h3>
+                <p>Descrição</p>
+                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
+            </div>
+
+            <div className="card-projects">
+                <img src={picExemplar} className="img-projects" alt="" />
+                <h3 className="card-title">Em Desenvolvimento...</h3>
+                <p>Descrição</p>
+                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
+            </div>
+
+        </div>
+    </div>
+</section>
         </section>
 
         
@@ -81,4 +78,4 @@ function ProjectsGrid(){
     )
 }
 
-export default ProjectsGrid
+export default ProjectsGrid;
