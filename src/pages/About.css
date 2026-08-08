@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+
 .banner-about{
-    background-image: url(../assets/banner-about.svg);
+    background-image: url(../assets/banner-about.png);
     width: 100%;
     padding-top: 10.5rem;
     
     & > h1{
         padding: 41px 68px;
         justify-self: center;
-        font-family: "DM Serif Display", serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 50px;
         font-weight: 400;
         background-color: #ffff;
@@ -19,7 +23,7 @@
     padding: 70px 6rem;
     width: 85%;
     & > h1{
-        font-family: "DM Serif Display", serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 50px;
         font-weight: 400;
     }

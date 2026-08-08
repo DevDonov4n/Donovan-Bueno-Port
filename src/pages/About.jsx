@@ -6,10 +6,10 @@ function About() {
         <>
             <Header />
             <section className="banner-about">
-                <h1> About Us </h1>
+                <h1> Sobre Mim </h1>
             </section>
             <section className="about-content">
-                <h1>We set the trends of modern living Services.</h1>
+                <h1>Olá Mundo!<br/>Eu me chamo Donovan Bueno de Deus</h1>
                 <div className="about-info">
                     <p id="about-color">It is a long established fact that a reader will be distracted by the of readable content of a page</p>
                     <p className="about-text">when lookings at its layouts the points spriof using that it has a more less normal.A wonderful serenity has taken pgossession of my entire soul, like thesce sweet morndsings of sphring which I enjoy with my forwhole heart. I am alone, and feel the charm of excgistence in this spot, which was created for the bliss of souls like mine.</p>

@@ -10,7 +10,7 @@ function Projects() {
         <>
             <Header />
             <section className="banner-projects">
-                <h1>Projects</h1>
+                <h1>Projetos</h1>
             </section>
             <ProjectsGrid />
             <Footer />

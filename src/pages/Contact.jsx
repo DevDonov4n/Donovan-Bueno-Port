@@ -9,7 +9,7 @@ function Contact() {
             <Header />
 
             <section className="banner-contact">
-                <h1>Contact</h1>
+                <h1>Contato</h1>
             </section>
 
             <h1 id="p-contact">We love meeting new people and helping them.</h1>
