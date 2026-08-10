@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+
+
 *{
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
@@ -96,14 +98,15 @@ nav a:hover{
 
     header{
         
-        justify-content: space-around;
-        padding: 20px 1rem;
+        
+        justify-content: space-between;
+        padding: 20px 0;
         
     }
 
     header h1{
         font-size:28px;
-        margin-left:0;
+        margin-left: 2rem;
     }
 
     .desktop-nav{
@@ -115,6 +118,8 @@ nav a:hover{
         display:flex;
         justify-content:center;
         align-items:center;
+
+        margin-right:2rem;
 
         width:55px;
         height:55px;
@@ -133,40 +138,46 @@ nav a:hover{
 
     }
 
-    .mobile-nav{
+    .mobile-nav {
+    display: flex;
+    flex-direction: column;
 
-        display:flex;
-        flex-direction:column;
+    position: fixed;
 
-        position:fixed;
+    top: 126px;
+    right: -300px;
 
-        top:90px;
-        right:-300px;
+    width: 230px;
+    padding: 25px;
 
-        width:230px;
+    border-radius: 30px;
 
-        padding:25px;
+    background: #b300ff;
 
-        border-radius:30px;
+    transition:
+        .35s,
+        background .3s ease,
+        backdrop-filter .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 
-        background: rgba(140, 82, 255, 0.35);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+    z-index: 1001;
+}
 
-        border-bottom: 1px solid rgba(255,255,255,.15);
-        box-shadow: 0 8px 30px rgba(0,0,0,.15);
+.mobile-nav.active {
+    margin-top: 1.5rem;
+    right: 1px;
+}
 
-        transition:.35s;
+.mobile-nav.scrolled {
+    background: rgba(140, 82, 255, 0.35);
 
-        z-index:1001;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
-    }
-
-    .mobile-nav.active{
-        margin-top: 1.5rem;
-        right:1px;
-        
-    }
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+}
 
     
 
@@ -189,5 +200,7 @@ nav a:hover{
         font-weight:bold;
 
     }
+
+    
 
 }

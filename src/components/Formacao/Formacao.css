@@ -1,0 +1,208 @@
+.formation {
+    width: 100%;
+    padding: 6rem 6rem;
+    box-sizing: border-box;
+    background: #fff;
+    color: #000;
+}
+
+
+/* TÍTULO */
+
+.formation-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 4rem;
+}
+
+.formation-title span {
+    color: #b300ff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.formation-title h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+
+/* LISTA */
+
+.formation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* CARD */
+
+.formation-card {
+    display: flex;
+    gap: 2rem;
+
+    padding: 2rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.formation-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(179, 0, 255, 0.5);
+
+    background: rgba(179, 0, 255, 0.06);
+}
+
+
+/* NÚMERO */
+
+.formation-number {
+    display: flex;
+    align-items: flex-start;
+
+    color: #b300ff;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    min-width: 40px;
+}
+
+
+/* CONTEÚDO */
+
+.formation-content {
+    flex: 1;
+}
+
+.formation-content h3 {
+    margin: 0 0 .5rem;
+
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.formation-content h4 {
+    margin: 0 0 .5rem;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    color: #b300ff;
+}
+
+.formation-period {
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: #b300ff;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.formation-content p {
+    max-width: 850px;
+
+    margin-bottom: 1.5rem;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #000;
+}
+
+
+/* TÓPICOS */
+
+.formation-content ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: .6rem 2rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.formation-content li {
+    margin: 0;
+    padding: 0;
+
+    color: #000;
+
+    font-size: 16px;
+}
+
+.formation-content li::before {
+    content: "▹";
+
+    margin-right: .6rem;
+
+    color: #b300ff;
+}
+
+@media (max-width: 768px) {
+
+    .formation {
+        padding: 4rem 1.5rem;
+    }
+
+    .formation-title {
+        margin-bottom: 2.5rem;
+    }
+
+    .formation-title h2 {
+        font-size: 38px;
+    }
+
+    .formation-card {
+        gap: 1rem;
+        padding: 1.5rem;
+
+        border-radius: 20px;
+    }
+
+    .formation-number {
+        font-size: 16px;
+        min-width: 30px;
+    }
+
+    .formation-content h3 {
+        font-size: 21px;
+    }
+
+    .formation-content h4 {
+        font-size: 15px;
+    }
+
+    .formation-content p {
+        font-size: 15px;
+    }
+
+    .formation-content ul {
+        grid-template-columns: 1fr;
+    }
+
+}

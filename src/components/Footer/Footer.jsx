@@ -20,7 +20,7 @@ function Footer() {
                     <p>A escola que prepara você para as profissões em alta no mercado de trabalho.</p>
                     <div className="footer-icons">
     <a
-        href="https://linkedin.com/in/seu-perfil"
+        href="https://www.linkedin.com/in/donovan-bueno-de-deus-2b77b8266/"
         target="_blank"
         rel="noopener noreferrer"
     >
@@ -28,7 +28,7 @@ function Footer() {
     </a>
 
     <a
-        href="https://instagram.com/seu-usuario"
+        href="https://instagram.com/donov4n.b"
         target="_blank"
         rel="noopener noreferrer"
     >
@@ -36,7 +36,7 @@ function Footer() {
     </a>
 
     <a
-        href="https://github.com/seu-usuario"
+        href="https://github.com/devdonov4n"
         target="_blank"
         rel="noopener noreferrer"
     >

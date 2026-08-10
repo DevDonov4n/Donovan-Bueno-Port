@@ -5,6 +5,8 @@ import { IoClose } from "react-icons/io5";
 
 import "./Header.css";
 
+
+
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -40,13 +42,13 @@ function Header() {
                 {menuOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
             </button>
 
-            {/* Menu Mobile */}
-            <nav className={`mobile-nav ${menuOpen ? "active" : ""}`}>
-                <Link onClick={() => setMenuOpen(false)} to="/">Home</Link>
-                <Link onClick={() => setMenuOpen(false)} to="/about">Sobre</Link>
-                <Link onClick={() => setMenuOpen(false)} to="/projects">Projetos</Link>
-                <Link onClick={() => setMenuOpen(false)} to="/contact">Contato</Link>
-            </nav>
+        {/* Menu Mobile */}
+        <nav className={`mobile-nav ${menuOpen ? "active" : ""} ${scrolled ? "scrolled" : ""}`}>
+            <Link onClick={() => setMenuOpen(false)} to="/">Home</Link>
+            <Link onClick={() => setMenuOpen(false)} to="/about">Sobre</Link>
+            <Link onClick={() => setMenuOpen(false)} to="/projects">Projetos</Link>
+            <Link onClick={() => setMenuOpen(false)} to="/contact">Contato</Link>
+        </nav>
 
         </header>
     );

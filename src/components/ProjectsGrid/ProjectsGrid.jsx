@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { BsArrowUpRight } from "react-icons/bs";
+import { FaCss3Alt } from "react-icons/fa";
 //ASSETS
 import theDevNews from "../../assets/the-dev-news.png";
 import boardTarefas from "../../assets/board-tarefas.png";
@@ -18,7 +19,7 @@ function ProjectsGrid(){
         <section className="projects-section">
             <div className="projects-intro">
                 <h1 id='projects-title'>Projetos Desenvolvidos</h1>
-                <p id="projects-p">Em minha caminhada, desde então venho realizando alguns projetos utilizando <DiJsBadge/>, <FaReact/>, <FaHtml5/> e <SiTypescript/>, e outras tecnologias.</p>
+                <p id="projects-p">Em minha caminhada, desde então venho realizando alguns projetos utilizando <p className="language-tag"><DiJsBadge/>JavaScript</p>, <p className="language-tag"><FaReact/>React.JS</p>, <p className="language-tag"><FaHtml5/>HTML</p>&<p className="language-tag"><FaCss3Alt/>CSS</p> e <p className="language-tag"><SiTypescript/>TypeScript</p>, e outras tecnologias.</p>
             </div>
             <section className="projects">
     <div className="container">
