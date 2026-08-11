@@ -7,14 +7,23 @@
 }
 
 .language-tag {
-    padding: 5px 10px;
-    border-radius: 999px;
-    border: 1px solid #c13ff9;
-    width: fit-content;
+    margin: 5px 0;
+
     display: inline-flex;
+    align-items: center;
+    
+    gap: 5px;
+    padding: 5px 10px;
+
+    width: fit-content;
+
+    border-radius: 40px;
+    border: 1px solid #c13ff9;
+
     color: #b300ff;
     background-color: rgba(179, 0, 255, 0.1);
-    align-items: center;
+
+    font-size: 14px;
 }
 
 .img-projects{
@@ -65,7 +74,7 @@
 }
 
 .card-projects p{
-    margin:10px 0 20px;
+    margin:10px 1rem 20px;
     text-align:center;
 }
 
@@ -78,7 +87,7 @@
 
     transition: .3s;
 
-    background: #fff;
+    background: var(--surface);
 }
 
 .card-projects:hover{
@@ -98,7 +107,7 @@
 
     width: fit-content;
     align-self: center;
-
+    margin-top: 1rem;
     margin-bottom: 20px;
     
     text-align: center;

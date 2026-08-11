@@ -19,7 +19,33 @@ function ProjectsGrid(){
         <section className="projects-section">
             <div className="projects-intro">
                 <h1 id='projects-title'>Projetos Desenvolvidos</h1>
-                <p id="projects-p">Em minha caminhada, desde então venho realizando alguns projetos utilizando <p className="language-tag"><DiJsBadge/>JavaScript</p>, <p className="language-tag"><FaReact/>React.JS</p>, <p className="language-tag"><FaHtml5/>HTML</p>&<p className="language-tag"><FaCss3Alt/>CSS</p> e <p className="language-tag"><SiTypescript/>TypeScript</p>, e outras tecnologias.</p>
+                <div id="projects-p">
+                    Em minha caminhada, desde então venho realizando alguns projetos utilizando
+
+                    <div className="language-tags">
+                        <span className="language-tag">
+                            <DiJsBadge /> JavaScript
+                        </span>
+
+                        <span className="language-tag">
+                            <FaReact /> React.JS
+                        </span>
+
+                        <span className="language-tag">
+                            <FaHtml5 /> HTML
+                        </span>
+
+                        <span className="language-tag">
+                            <FaCss3Alt /> CSS
+                        </span>
+
+                        <span className="language-tag">
+                            <SiTypescript /> TypeScript
+                        </span>
+                         e outras tecnologias.
+                    </div> 
+                    
+                </div>
             </div>
             <section className="projects">
     <div className="container">
@@ -31,6 +57,19 @@ function ProjectsGrid(){
                 <img src={theDevNews} className="img-projects" alt="" />
                 <h3 className="card-title">BLOG - The Dev News</h3>
                 <p>Uma landing page para o portal The Dev News, desenvolvida com HTML, CSS. O obejetivo deste projeto é apresentar as notícias do universo da programação de forma atrativa e informativa e responsiva.</p>
+                <div className="language-tags">
+                    <span className="language-tag">
+                        <DiJsBadge /> JavaScript
+                    </span>
+
+                    <span className="language-tag">
+                        <FaHtml5 /> HTML
+                    </span>
+
+                    <span className="language-tag">
+                        <FaCss3Alt /> CSS
+                    </span>
+                </div>
                 <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
 
@@ -38,6 +77,19 @@ function ProjectsGrid(){
                 <img src={boardTarefas} className="img-projects" alt="" />
                 <h3 className="card-title">Board de Tarefas</h3>
                 <p>Um projeto de board de tarefas desenvolvido com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e componentização.</p>
+                <div className="language-tags">
+                    <span className="language-tag">
+                        <DiJsBadge /> JavaScript
+                    </span>
+
+                    <span className="language-tag">
+                        <FaHtml5 /> HTML
+                    </span>
+
+                    <span className="language-tag">
+                        <FaCss3Alt /> CSS
+                    </span>
+                </div>
                 <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
 
@@ -45,6 +97,15 @@ function ProjectsGrid(){
                 <img src={landingPageDNC} className="img-projects" alt="" />
                 <h3 className="card-title">Landing Page - DNC</h3>
                 <p>Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto é apresentar os cursos e serviços da instituição de forma atrativa e informativa.</p>
+                <div className="language-tags">
+                    <span className="language-tag">
+                        <FaHtml5 /> HTML
+                    </span>
+
+                    <span className="language-tag">
+                        <FaCss3Alt /> CSS
+                    </span>
+                </div>
                 <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
 
@@ -52,6 +113,19 @@ function ProjectsGrid(){
                 <img src={toDoList} className="img-projects" alt="" />
                 <h3 className="card-title">To-Do List</h3>
                 <p>Uma lista de tarefas desenvolvida com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e código assíncrono.</p>
+                <div className="language-tags">
+                    <span className="language-tag">
+                        <DiJsBadge /> JavaScript
+                    </span>
+
+                    <span className="language-tag">
+                        <FaHtml5 /> HTML
+                    </span>
+
+                    <span className="language-tag">
+                        <FaCss3Alt /> CSS
+                    </span>
+                </div>
                 <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
 

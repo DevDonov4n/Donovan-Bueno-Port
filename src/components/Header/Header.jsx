@@ -62,37 +62,39 @@ function Header() {
 
             </nav>
 
+            <div className="btn-container">
+                {/* Botão Dark / Light */}
 
-            {/* Botão Dark / Light */}
+                <button
+                    className="theme-btn"
+                    onClick={toggleTheme}
+                    aria-label="Alternar tema"
+                >
 
-            <button
-                className="theme-btn"
-                onClick={toggleTheme}
-                aria-label="Alternar tema"
-            >
+                    {theme === "dark" ? (
+                        <MdLightMode />
+                    ) : (
+                        <MdDarkMode />
+                    )}
 
-                {theme === "dark" ? (
-                    <MdLightMode />
-                ) : (
-                    <MdDarkMode />
-                )}
-
-            </button>
+                </button>
 
 
-            {/* Botão Mobile */}
+                {/* Botão Mobile */}
 
-            <button
-                className="menu-btn"
-                onClick={() => setMenuOpen(!menuOpen)}
-            >
+                <button
+                    className="menu-btn"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
 
-                {menuOpen
-                    ? <IoClose />
-                    : <HiOutlineMenuAlt3 />
-                }
+                    {menuOpen
+                        ? <IoClose />
+                        : <HiOutlineMenuAlt3 />
+                    }
 
-            </button>
+                </button>
+            </div>
+            
 
 
             {/* Menu Mobile */}

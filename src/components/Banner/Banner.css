@@ -34,6 +34,7 @@
 
 #banner-h1{
 
+    color:#1D1D1D;
     font-size:clamp(2.3rem,5vw,4rem);
 
     line-height:1.15;
@@ -78,6 +79,7 @@
 
     max-width:650px;
 
+    color:#1D1D1D;
 
     background: rgba(255, 255, 255, 0.336);
     backdrop-filter: blur(8px);

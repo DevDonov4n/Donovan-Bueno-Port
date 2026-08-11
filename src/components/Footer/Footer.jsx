@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 
 
 function Footer() {
+
+    const currentYear = new Date().getFullYear();
+
     return(
         <>
         <footer>
@@ -17,7 +20,7 @@ function Footer() {
             <section className="footer-info">
                 <div className="footer-intro">
                     <img src={ Logo } width="60px" alt="" />
-                    <p>A escola que prepara você para as profissões em alta no mercado de trabalho.</p>
+                    <p>© {currentYear} Donovan Bueno de Deus.</p>
                     <div className="footer-icons">
     <a
         href="https://www.linkedin.com/in/donovan-bueno-de-deus-2b77b8266/"
