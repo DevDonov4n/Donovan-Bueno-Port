@@ -1,5 +1,5 @@
 .banner-projects{
-    background-image: url(../assets/Images.svg);
+    background-image: url(../assets/banner-contact.png);
     width: 100%;
     padding-top: 10.5rem;
     
@@ -9,7 +9,7 @@
         font-family: "DM Serif Display", serif;
         font-size: 50px;
         font-weight: 400;
-        background-color: #ffff;
+        background-color: var(--bg);
         border-radius: 37px 37px 0 0;
     }
 } 

@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Formation from "../components/Formacao/Formacao";
+import Experience from "../components/Experiencia/Experiencia";
 
 import "./About.css";
 
@@ -41,9 +42,10 @@ function About() {
                         </h2>
 
                         <p>
-                            Sou estudante de Desenvolvimento de Software
-                            Multiplataforma e desenvolvedor focado em
-                            desenvolvimento web.
+                            Sou estudante de Desenvolvimento de Software Multiplataforma e tenho 
+                            interesse em desenvolvimento de software, tecnologia e criação de 
+                            soluções digitais. Busco constantemente aprimorar meus conhecimentos
+                            e transformar aprendizado em projetos práticos.
                         </p>
 
                         <p>
@@ -55,10 +57,9 @@ function About() {
                     </div>
 
                 </section>
-
-
-                {/* Formação */}
-
+ 
+                <Experience />
+                
                 <Formation />
 
             </main>

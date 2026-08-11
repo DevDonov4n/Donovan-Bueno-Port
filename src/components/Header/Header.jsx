@@ -45,7 +45,7 @@ function Header() {
             <nav className="desktop-nav">
 
                 <Link to="/">
-                    Home
+                    Início
                 </Link>
 
                 <Link to="/about">
@@ -107,7 +107,7 @@ function Header() {
                     onClick={() => setMenuOpen(false)}
                     to="/"
                 >
-                    Home
+                    Início
                 </Link>
 
                 <Link
