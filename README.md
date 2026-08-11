@@ -1,16 +1,51 @@
-# React + Vite
+# 💻 Portfólio — Donovan Bueno
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Portfólio pessoal desenvolvido em React para apresentar minha trajetória acadêmica, projetos, conhecimentos técnicos e experiências na área de tecnologia.
 
-Currently, two official plugins are available:
+## 📌 Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto consiste no desenvolvimento do meu portfólio pessoal, criado com o objetivo de apresentar minha trajetória como estudante e desenvolvedor, reunindo informações sobre minha formação, projetos desenvolvidos e tecnologias com as quais venho trabalhando.
 
-## React Compiler
+O projeto foi desenvolvido utilizando React, com uma arquitetura baseada em componentes reutilizáveis e foco em responsividade, organização do código e experiência do usuário.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Além de funcionar como meu portfólio profissional, o projeto também representa uma aplicação prática dos conhecimentos adquiridos durante minha formação em Desenvolvimento de Software Multiplataforma e nos estudos de Engenharia de Software.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tecnologias utilizadas
+
+### Front-end
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- React Icons
+- Vite
+
+### Ferramentas
+
+- Git
+- GitHub
+- VS Code
+
+---
+
+## 🎨 Funcionalidades
+
+- Página inicial com apresentação pessoal
+- Página "Sobre Mim"
+- Seção de formação acadêmica e técnica
+- Galeria de projetos desenvolvidos
+- Página de contato
+- Navegação entre páginas utilizando React Router
+- Layout responsivo para diferentes tamanhos de tela
+- Menu de navegação responsivo
+- Header com comportamento durante a rolagem
+- Efeito de Glassmorphism no Header durante o scroll
+- Alternância entre Dark Mode e Light Mode
+- Persistência do tema escolhido utilizando LocalStorage
+- Componentização da interface
+
+---
