@@ -8,6 +8,38 @@
     font-style: normal;
 }
 
+.theme-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin-right: 2rem;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 
+        .3s ease,
+        transform .3s ease;
+}
+
+.theme-btn:hover {
+    transform: rotate(15deg) scale(1.08);
+
+    background: #fff;
+    color: #b300ff;
+}
+
 .menu-btn,
 .mobile-nav{
     display:none;
@@ -103,6 +135,15 @@ nav a:hover{
         padding: 20px 0;
         
     }
+
+    .theme-btn {
+        margin-left: auto;
+        margin-right: 1rem;
+
+        width: 45px;
+        height: 45px;
+    }
+
 
     header h1{
         font-size:28px;
