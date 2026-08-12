@@ -1,5 +1,5 @@
 import { useState } from "react";
-import WhatsAppButton from "../components/WhatsAppButton/WhatsAppButton";
+import WhatsAppButton from "../components/WhatsappButton/WhatsappButton";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
