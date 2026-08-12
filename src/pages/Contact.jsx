@@ -81,7 +81,7 @@ function Contact() {
                 <button 
                     id="button-contact"
                     type="submit"
-                >Send Now →</button>
+                >Enviar →</button>
 
                 <p className="contact-result">
                     {result}

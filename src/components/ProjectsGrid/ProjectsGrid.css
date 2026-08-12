@@ -1,9 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-*{
+* {
+    box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.projects-intro {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10vh auto 0;
+    padding: 0 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#projects-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+}
+
+#projects-p {
+    max-width: 900px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.language-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.projects-intro .language-tags {
+    justify-content: center;
 }
 
 .language-tag {
@@ -11,11 +69,12 @@
 
     display: inline-flex;
     align-items: center;
-    
+
     gap: 5px;
     padding: 5px 10px;
 
     width: fit-content;
+    max-width: 100%;
 
     border-radius: 40px;
     border: 1px solid #c13ff9;
@@ -26,140 +85,199 @@
     font-size: 14px;
 }
 
-.img-projects{
-    width:100%;
-    aspect-ratio:16/9;
+/* =========================
+   GRID
+========================= */
 
-    object-fit:cover;
-
-    border-radius:20px 20px 0 0;
-
-    display:block;
-}
-
-.projects-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+.projects {
     width: 100%;
-    padding: 30px 1rem;
 }
 
-#projects-title{
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 50px;
+.projects-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 30px 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
 }
 
-#projects-p{
-    font-size: 22px;
-}   
+/* =========================
+   CARDS
+========================= */
 
-.projects-intro{
-    margin-top: 10vh;
-    justify-self: center;
-    justify-items: center;
-}
+.card-projects {
+    width: 100%;
+    min-width: 0;
 
-.img-projects{
-    border-radius: 20px;
-}
-
-.card-title{
-    margin:15px 15px 0 10px;
-    font-size:24px;
-    font-weight:700;
-    text-align: start;
-}
-
-.card-projects p{
-    margin:10px 1rem 20px;
-    text-align:center;
-}
-
-.card-projects{
     display: flex;
     flex-direction: column;
 
     border-radius: 20px;
     overflow: hidden;
 
-    transition: .3s;
-
     background: var(--surface);
+
+    transition: 0.3s;
 }
 
-.card-projects:hover{
+.card-projects:hover {
     transform: translateY(-5px);
-    box-shadow: rgba(100,100,111,.18) 0 10px 25px;
+    box-shadow: rgba(100, 100, 111, 0.18) 0 10px 25px;
 }
 
-.card-btn{
-    background: #1D1D1D;
+/* =========================
+   IMAGENS
+========================= */
+
+.img-projects {
+    width: 100%;
+    max-width: 100%;
+
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    border-radius: 20px 20px 0 0;
+
+    display: block;
+}
+
+/* =========================
+   CONTEÚDO DOS CARDS
+========================= */
+
+.card-title {
+    margin: 15px 15px 0 10px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    text-align: start;
+}
+
+.card-projects p {
+    margin: 10px 1rem 20px;
+
+    text-align: center;
+    line-height: 1.5;
+
+    overflow-wrap: break-word;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.card-btn {
+    background: #1d1d1d;
     color: #fff;
+
     border: none;
+
     padding: 10px 20px;
+
     border-radius: 40px;
+
     font-size: 16px;
     font-weight: 600;
+
     cursor: pointer;
 
     width: fit-content;
+    max-width: 100%;
+
     align-self: center;
-    margin-top: 1rem;
+
+    margin-top: auto;
     margin-bottom: 20px;
-    
+
     text-align: center;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     gap: 5px;
 
-    transition: .3s;
+    transition: 0.3s;
+}
 
-    &:hover{
-        transform: translateY(-3px);
-        background-color: #b300ff;
-        box-shadow: rgba(100,100,111,.18) 0 10px 25px;
+.card-btn:hover {
+    transform: translateY(-3px);
+
+    background-color: #b300ff;
+
+    box-shadow: rgba(100, 100, 111, 0.18) 0 10px 25px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    #projects-p {
+        margin: 0;
     }
 }
 
-@media (max-width:992px){
+/* =========================
+   MOBILE
+========================= */
 
-    .projects-grid{
-        grid-template-columns:repeat(2,1fr);
-        padding: 2rem 0;
+@media (max-width: 480px) {
+
+    .projects-intro {
+        padding: 0 1rem;
     }
 
-    #projects-p{
-        margin:0 2rem;
-    }
-
-}
-
-@media (max-width:480px){
-
-    .projects-grid{
-        gap:18px;
-        
-    }
-
-    #projects-title{
-        font-size:36px;
+    #projects-title {
+        font-size: 36px;
         text-align: center;
     }
 
-    #projects-p{
-        font-size:18px;
-        margin:0 2rem;
+    #projects-p {
+        font-size: 18px;
+        margin: 0;
     }
 
-}
+    .projects-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
 
-@media (max-width:480px){
-
-    .projects-grid{
-        grid-template-columns:1fr;
         width: 100%;
-        margin: 1rem 0;
+
+        padding: 20px 1rem;
+
+        margin: 0;
+
+        gap: 18px;
     }
 
+    .card-title {
+        font-size: 18px;
+        margin: 12px 10px 0;
+    }
+
+    .card-projects p {
+        font-size: 14px;
+        margin: 8px 10px 15px;
+    }
+
+    .language-tag {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .card-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
 }
