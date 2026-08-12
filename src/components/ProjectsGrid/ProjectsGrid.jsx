@@ -48,7 +48,7 @@ function ProjectsGrid(){
                 </div>
             </div>
             <section className="projects">
-    <div className="container">
+    
         
 
         <div className="projects-grid">
@@ -144,7 +144,7 @@ function ProjectsGrid(){
             </div>
 
         </div>
-    </div>
+    
 </section>
         </section>
 
