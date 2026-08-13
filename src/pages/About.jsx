@@ -13,7 +13,7 @@ function About() {
             <Header />
 
             <main>
-
+        
                 {/* Banner */}
 
                 <section className="banner-about">
@@ -43,17 +43,17 @@ function About() {
                         </h2>
 
                         <p>
-                            Sou estudante de Desenvolvimento de Software Multiplataforma e tenho 
-                            interesse em desenvolvimento de software, tecnologia e criação de 
-                            soluções digitais. Busco constantemente aprimorar meus conhecimentos
-                            e transformar aprendizado em projetos práticos.
+                            Sou estudante de Desenvolvimento de Software Multiplataforma na FATEC e apaixonado por tecnologia e desenvolvimento de software.
                         </p>
 
                         <p>
-                            Atualmente venho aprimorando meus conhecimentos
-                            em JavaScript, React, Next.js, Node.js,
-                            TypeScript e desenvolvimento de aplicações.
+                            Atualmente, estou aprimorando meus conhecimentos em JavaScript, React, TypeScript, Next.js e Node.js, criando projetos e buscando evoluir cada vez mais como desenvolvedor.
                         </p>
+
+                        <p>
+                            Meu objetivo é transformar o que aprendo em soluções reais, continuar crescendo na área e conquistar minha primeira oportunidade como estagiário em desenvolvimento de software.
+                        </p>
+                        
 
                     </div>
 
