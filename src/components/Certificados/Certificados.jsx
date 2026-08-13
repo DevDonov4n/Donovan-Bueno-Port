@@ -1,30 +1,33 @@
 import "./Certificados.css";
 
 function Certificados() {
+
     const certificates = [
         {
             title: "React",
             institution: "Instituto DNC",
             workload: "10 horas",
             date: "04/04/2026",
-            image: "/certificates/react.webp",
-            pdf: "react.pdf",
+            image: "/Certificados/react.png",
+            pdf: "/Certificados/react.pdf",
         },
+
         {
             title: "Javascript Avançado",
             institution: "Instituto DNC",
             workload: "8 horas",
             date: "04/01/2026",
-            image: "/certificates/javascript-avancado.webp",
-            pdf: "javasript-avancado.pdf",
+            image: "/Certificados/javascript-avancado.png",
+            pdf: "/Certificados/javascript-avancado.pdf",
         },
+
         {
             title: "HTML e CSS",
             institution: "Instituto DNC",
             workload: "10 horas",
             date: "03/08/2025",
-            image: "/certificates/html-css.webp",
-            pdf: "htmlcss.pdf",
+            image: "/Certificados/html-css.png",
+            pdf: "/Certificados/html-css.pdf",
         },
     ];
 
@@ -39,17 +42,21 @@ function Certificados() {
             <div className="certificates-grid">
 
                 {certificates.map((certificate, index) => (
+
                     <article
                         className="certificate-card"
                         key={index}
                     >
 
                         <div className="certificate-image">
+
                             <img
                                 src={certificate.image}
                                 alt={`Certificado de ${certificate.title}`}
                             />
+
                         </div>
+
 
                         <div className="certificate-content">
 
@@ -72,6 +79,7 @@ function Certificados() {
                         </div>
 
                     </article>
+
                 ))}
 
             </div>
