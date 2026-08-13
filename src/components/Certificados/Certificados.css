@@ -1,0 +1,261 @@
+.certificates {
+    width: 100%;
+    padding: 6rem 6rem;
+    box-sizing: border-box;
+
+    background: var(--bg);
+    color: var(--text);
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+
+/* TÍTULO */
+
+.certificates-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 4rem;
+}
+
+.certificates-title h2 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+
+    color: var(--text);
+}
+
+
+/* GRID */
+
+.certificates-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* CARD */
+
+.certificate-card {
+    overflow: hidden;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 25px;
+
+    color: var(--text);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(179, 0, 255, 0.5);
+
+    background: rgba(179, 0, 255, 0.06);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* IMAGEM DO CERTIFICADO */
+
+.certificate-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #111218;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.04);
+}
+
+
+/* CONTEÚDO */
+
+.certificate-content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5rem;
+}
+
+.certificate-content h3 {
+    margin: 0 0 .5rem;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+.certificate-content h4 {
+    margin: 0 0 .6rem;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--primary);
+}
+
+.certificate-content span {
+    margin-bottom: 1.5rem;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--text-secondary);
+}
+
+
+/* BOTÃO */
+
+.certificate-content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: .8rem 1rem;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+
+    color: var(--primary);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+.certificate-content a:hover {
+    background: var(--primary);
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+    .certificates {
+        padding: 5rem 3rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .certificates {
+        padding: 4rem 1.5rem;
+    }
+
+    .certificates-title {
+        margin-bottom: 2.5rem;
+    }
+
+    .certificates-title h2 {
+        font-size: 38px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+    }
+
+    .certificate-card {
+        border-radius: 20px;
+    }
+
+    .certificate-content {
+        padding: 1.25rem;
+    }
+
+    .certificate-content h3 {
+        font-size: 21px;
+    }
+
+    .certificate-content h4 {
+        font-size: 15px;
+    }
+
+}
+
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+    .certificates {
+        padding: 3.5rem 1rem;
+    }
+
+    .certificates-title h2 {
+        font-size: 34px;
+    }
+
+    .certificate-image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .certificate-content h3 {
+        font-size: 20px;
+    }
+
+}

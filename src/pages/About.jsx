@@ -2,6 +2,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Formation from "../components/Formacao/Formacao";
 import Experience from "../components/Experiencia/Experiencia";
+import Certificados from "../components/Certificados/Certificados";
 
 import "./About.css";
 
@@ -61,6 +62,8 @@ function About() {
                 <Experience />
                 
                 <Formation />
+
+                <Certificados />
 
             </main>
 
