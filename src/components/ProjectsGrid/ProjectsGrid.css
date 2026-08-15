@@ -58,6 +58,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
+    align-self: center;
 }
 
 .projects-intro .language-tags {
@@ -191,7 +192,7 @@ body {
 
     align-self: center;
 
-    margin-top: auto;
+    margin-top: 20px;
     margin-bottom: 20px;
 
     text-align: center;
