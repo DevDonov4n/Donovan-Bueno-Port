@@ -5,12 +5,17 @@ import { FaHtml5 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { BsArrowUpRight } from "react-icons/bs";
 import { FaCss3Alt } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiPostgresql } from "react-icons/si";
+import { IoConstruct } from "react-icons/io5";
+
 //ASSETS
 import theDevNews from "../../assets/the-dev-news.png";
 import boardTarefas from "../../assets/board-tarefas.png";
 import landingPageDNC from "../../assets/landing-page-dnc.png";
 import picExemplar from "../../assets/image.png";
 import toDoList from "../../assets/to-do-list.png";
+import jrlingeries from "../../assets/jr-lingeries.png";
 
 
 function ProjectsGrid(){
@@ -130,16 +135,26 @@ function ProjectsGrid(){
             </div>
 
             <div className="card-projects">
-                <img src={picExemplar} className="img-projects" alt="" />
-                <h3 className="card-title">Em Desenvolvimento...</h3>
-                <p>Descrição</p>
-                <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
-            </div>
+                <img src={ jrlingeries } className="img-projects" alt="" />
+                <h3 className="card-title">JR Lingeries</h3>
+                <p>Um E-comerce de roupas íntimas com login para clientes e para o responsável um dashboard para acompanhar seus leads, estoque e renda mensal arrecadado</p>
+                <div className="language-tags">
+                    <span className="language-tag-building">
+                        <IoConstruct /> Em desenvolvimento
+                    </span>
 
-            <div className="card-projects">
-                <img src={picExemplar} className="img-projects" alt="" />
-                <h3 className="card-title">Em Desenvolvimento...</h3>
-                <p>Descrição</p>
+                    <span className="language-tag">
+                        <SiTypescript /> Typescript
+                    </span>
+
+                    <span className="language-tag">
+                        <RiNextjsFill /> Next.js
+                    </span>
+
+                    <span className="language-tag">
+                        <SiPostgresql /> PostgreSQL
+                    </span>
+                </div>
                 <button className="card-btn">Ver Projeto <BsArrowUpRight /></button>
             </div>
 
