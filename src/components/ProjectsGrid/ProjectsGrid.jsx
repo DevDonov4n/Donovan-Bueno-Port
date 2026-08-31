@@ -2,7 +2,8 @@ import { useState } from "react";
 import "../ProjectsGrid/ProjectsGrid.css";
 import { DiJsBadge } from "react-icons/di";
 import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiMysql, SiVisualstudiocode, SiPostgresql } from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiMysql, SiPostgresql } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import { RiNextjsFill } from "react-icons/ri";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoConstruct } from "react-icons/io5";
@@ -28,7 +29,7 @@ const techStack = [
     { name: "PostgreSQL", icon: <SiPostgresql /> },
     { name: "Git", icon: <FaGitAlt /> },
     { name: "GitHub", icon: <FaGithub /> },
-    { name: "VS Code", icon: <SiVisualstudiocode /> },
+    { name: "VS Code", icon: <VscVscode /> },
 ];
 
 const projects = [
@@ -105,24 +106,12 @@ function ProjectCarousel({ images, title }) {
 
             {images.length > 1 && (
                 <>
-                    <button
-                        type="button"
-                        className="carousel-arrow carousel-arrow-left"
-                        onClick={previousImage}
-                        aria-label="Imagem anterior"
-                    >
+                    <button type="button" className="carousel-arrow carousel-arrow-left" onClick={previousImage} aria-label="Imagem anterior">
                         <FiChevronLeft />
                     </button>
-
-                    <button
-                        type="button"
-                        className="carousel-arrow carousel-arrow-right"
-                        onClick={nextImage}
-                        aria-label="Próxima imagem"
-                    >
+                    <button type="button" className="carousel-arrow carousel-arrow-right" onClick={nextImage} aria-label="Próxima imagem">
                         <FiChevronRight />
                     </button>
-
                     <div className="carousel-dots" aria-label="Navegação das imagens">
                         {images.map((_, index) => (
                             <button
@@ -172,7 +161,6 @@ function ProjectsGrid() {
                     {projects.map((project) => (
                         <article className="card-projects" key={project.title}>
                             <ProjectCarousel images={project.images} title={project.title} />
-
                             <h3 className="card-title">{project.title}</h3>
                             <p>{project.description}</p>
 
