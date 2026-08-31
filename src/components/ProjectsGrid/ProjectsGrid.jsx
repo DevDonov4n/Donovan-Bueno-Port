@@ -87,17 +87,42 @@ const projects = [
 
 function ProjectCarousel({ images, title }) {
     const [currentImage, setCurrentImage] = useState(0);
+    const [touchStart, setTouchStart] = useState(null);
 
     const previousImage = () => {
+        if (images.length < 2) return;
         setCurrentImage((current) => (current === 0 ? images.length - 1 : current - 1));
     };
 
     const nextImage = () => {
+        if (images.length < 2) return;
         setCurrentImage((current) => (current === images.length - 1 ? 0 : current + 1));
     };
 
+    const handleTouchStart = (event) => {
+        setTouchStart(event.touches[0].clientX);
+    };
+
+    const handleTouchEnd = (event) => {
+        if (touchStart === null || images.length < 2) return;
+
+        const touchEnd = event.changedTouches[0].clientX;
+        const distance = touchStart - touchEnd;
+
+        if (Math.abs(distance) > 50) {
+            if (distance > 0) nextImage();
+            else previousImage();
+        }
+
+        setTouchStart(null);
+    };
+
     return (
-        <div className="project-carousel">
+        <div
+            className="project-carousel"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+        >
             <img
                 src={images[currentImage]}
                 className="img-projects"
@@ -106,12 +131,24 @@ function ProjectCarousel({ images, title }) {
 
             {images.length > 1 && (
                 <>
-                    <button type="button" className="carousel-arrow carousel-arrow-left" onClick={previousImage} aria-label="Imagem anterior">
+                    <button
+                        type="button"
+                        className="carousel-arrow carousel-arrow-left"
+                        onClick={previousImage}
+                        aria-label="Imagem anterior"
+                    >
                         <FiChevronLeft />
                     </button>
-                    <button type="button" className="carousel-arrow carousel-arrow-right" onClick={nextImage} aria-label="Próxima imagem">
+
+                    <button
+                        type="button"
+                        className="carousel-arrow carousel-arrow-right"
+                        onClick={nextImage}
+                        aria-label="Próxima imagem"
+                    >
                         <FiChevronRight />
                     </button>
+
                     <div className="carousel-dots" aria-label="Navegação das imagens">
                         {images.map((_, index) => (
                             <button
