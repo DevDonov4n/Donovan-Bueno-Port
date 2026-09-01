@@ -20,10 +20,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   INTRODUÇÃO
-========================= */
-
 .projects-intro {
     width: 100%;
     max-width: 1200px;
@@ -80,14 +76,36 @@ body {
     white-space: nowrap;
 }
 
-.tech-stack-list {
+.tech-stack-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 4%, black 96%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 4%, black 96%, transparent 100%);
+}
+
+.tech-stack-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tech-stack-track-group {
+    width: max-content;
+    display: flex;
+    animation: techStackScroll 28s linear infinite;
+    will-change: transform;
+}
+
+.tech-stack-track {
     display: flex;
     align-items: center;
     gap: 10px;
-    overflow-x: auto;
-    padding: 0 0 12px;
-    padding: 5px 0;
-    scrollbar-width: thin;
+    padding-right: 10px;
+    flex-shrink: 0;
+}
+
+.tech-stack-carousel.is-paused .tech-stack-track-group {
+    animation-play-state: paused;
 }
 
 .tech-stack-item {
@@ -103,12 +121,16 @@ body {
     border-radius: 14px;
     background: var(--surface);
     border: 1px solid rgba(128, 128, 128, 0.18);
-    transition: transform 0.25s, border-color 0.25s;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s;
 }
 
 .tech-stack-item:hover {
     transform: translateY(-4px);
-    border-color: #b300ff;
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
 .tech-stack-icon {
@@ -123,6 +145,15 @@ body {
     line-height: 1;
     text-align: center;
     opacity: 0.75;
+}
+
+@keyframes techStackScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* =========================
@@ -146,9 +177,9 @@ body {
     width: fit-content;
     max-width: 100%;
     border-radius: 40px;
-    border: 1px solid #c13ff9;
-    color: #b300ff;
-    background-color: rgba(179, 0, 255, 0.1);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: color-mix(in srgb, var(--primary) 10%, transparent);
     font-size: 14px;
 }
 
@@ -167,10 +198,6 @@ body {
     font-size: 14px;
 }
 
-/* =========================
-   GRID
-========================= */
-
 .projects {
     width: 100%;
 }
@@ -184,10 +211,6 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
 }
-
-/* =========================
-   CARDS
-========================= */
 
 .card-projects {
     width: 100%;
@@ -204,10 +227,6 @@ body {
     transform: translateY(-5px);
     box-shadow: rgba(100, 100, 111, 0.18) 0 10px 25px;
 }
-
-/* =========================
-   CARROSSEL
-========================= */
 
 .project-carousel {
     position: relative;
@@ -244,7 +263,7 @@ body {
 }
 
 .carousel-arrow:hover {
-    background: #b300ff;
+    background: var(--primary);
     transform: translateY(-50%) scale(1.08);
 }
 
@@ -280,10 +299,6 @@ body {
     transform: scale(1.25);
 }
 
-/* =========================
-   CONTEÚDO DOS CARDS
-========================= */
-
 .card-title {
     margin: 15px 15px 0 10px;
     font-size: 24px;
@@ -297,10 +312,6 @@ body {
     line-height: 1.5;
     overflow-wrap: break-word;
 }
-
-/* =========================
-   BOTÃO
-========================= */
 
 .card-btn {
     background: #1d1d1d;
@@ -326,13 +337,9 @@ body {
 
 .card-btn:hover {
     transform: translateY(-3px);
-    background-color: #b300ff;
+    background-color: var(--primary);
     box-shadow: rgba(100, 100, 111, 0.18) 0 10px 25px;
 }
-
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 992px) {
     .projects-grid {
@@ -344,10 +351,6 @@ body {
         margin: 0;
     }
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 480px) {
     .projects-intro {
@@ -408,5 +411,11 @@ body {
     .card-btn {
         font-size: 14px;
         padding: 8px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tech-stack-track-group {
+        animation: none;
     }
 }
