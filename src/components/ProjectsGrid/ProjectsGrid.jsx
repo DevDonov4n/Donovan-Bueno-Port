@@ -11,8 +11,11 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 // ASSETS
 import theDevNews from "../../assets/the-dev-news.png";
+import theDevNewsGif from "../../assets/the-dev-news.gif";
 import boardTarefas from "../../assets/board-tarefas.png";
-import landingPageDNC from "../../assets/landing-page-dnc.png";
+import boardTarefasGif from "../../assets/board-tarefas-gif.gif";
+import landingPage from "../../assets/landing-page.png";
+import landingPageGif from "../../assets/landing-page.gif";
 import toDoList from "../../assets/to-do-list.png";
 import jrlingeries from "../../assets/jr-lingeries.png";
 
@@ -36,7 +39,10 @@ const projects = [
     {
         title: "BLOG - The Dev News",
         description: "Uma landing page para o portal The Dev News, desenvolvida com HTML e CSS. O objetivo deste projeto é apresentar as notícias do universo da programação de forma atrativa, informativa e responsiva.",
-        images: [theDevNews],
+        images: [
+            theDevNews,
+            theDevNewsGif
+        ],
         technologies: [
             { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
@@ -46,7 +52,10 @@ const projects = [
     {
         title: "Board de Tarefas",
         description: "Um projeto de board de tarefas desenvolvido com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e componentização.",
-        images: [boardTarefas],
+        images: [
+            boardTarefas,
+            boardTarefasGif
+        ],
         technologies: [
             { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
@@ -54,20 +63,13 @@ const projects = [
         ],
     },
     {
-        title: "Landing Page - DNC",
-        description: "Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto é apresentar os cursos e serviços da instituição de forma atrativa e informativa.",
-        images: [landingPageDNC],
-        technologies: [
-            { name: "HTML", icon: <FaHtml5 /> },
-            { name: "CSS", icon: <FaCss3Alt /> },
+        title: "Landing Page ",
+        description: "Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto montar a landing page com integração ao Sheet Monkey",
+        images: [
+            landingPage, 
+            landingPageGif
         ],
-    },
-    {
-        title: "To-Do List",
-        description: "Uma lista de tarefas desenvolvida com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e código assíncrono.",
-        images: [toDoList],
         technologies: [
-            { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
             { name: "CSS", icon: <FaCss3Alt /> },
         ],
