@@ -39,10 +39,7 @@ const projects = [
     {
         title: "BLOG - The Dev News",
         description: "Uma landing page para o portal The Dev News, desenvolvida com HTML e CSS. O objetivo deste projeto é apresentar as notícias do universo da programação de forma atrativa, informativa e responsiva.",
-        images: [
-            theDevNews,
-            theDevNewsGif
-        ],
+        images: [theDevNews, theDevNewsGif],
         technologies: [
             { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
@@ -52,10 +49,7 @@ const projects = [
     {
         title: "Board de Tarefas",
         description: "Um projeto de board de tarefas desenvolvido com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e componentização.",
-        images: [
-            boardTarefas,
-            boardTarefasGif
-        ],
+        images: [boardTarefas, boardTarefasGif],
         technologies: [
             { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
@@ -65,10 +59,7 @@ const projects = [
     {
         title: "Landing Page ",
         description: "Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto montar a landing page com integração ao Sheet Monkey",
-        images: [
-            landingPage, 
-            landingPageGif
-        ],
+        images: [landingPage, landingPageGif],
         technologies: [
             { name: "HTML", icon: <FaHtml5 /> },
             { name: "CSS", icon: <FaCss3Alt /> },
@@ -168,6 +159,49 @@ function ProjectCarousel({ images, title }) {
     );
 }
 
+function TechStackCarousel() {
+    const [isPaused, setIsPaused] = useState(false);
+
+    const togglePause = () => {
+        setIsPaused((paused) => !paused);
+    };
+
+    const renderTechnologies = (isDuplicate = false) => (
+        <div
+            className="tech-stack-track"
+            aria-hidden={isDuplicate}
+        >
+            {techStack.map((technology) => (
+                <button
+                    type="button"
+                    className="tech-stack-item"
+                    key={`${technology.name}-${isDuplicate ? "duplicate" : "original"}`}
+                    title={`${technology.name} — ${isPaused ? "Clique para continuar" : "Clique para pausar"}`}
+                    aria-label={`${technology.name}. ${isPaused ? "Clique para continuar o carrossel" : "Clique para pausar o carrossel"}`}
+                    onClick={togglePause}
+                >
+                    <span className="tech-stack-icon">{technology.icon}</span>
+                    <span className="tech-stack-name">{technology.name}</span>
+                </button>
+            ))}
+        </div>
+    );
+
+    return (
+        <div
+            className={`tech-stack-carousel ${isPaused ? "is-paused" : ""}`}
+            aria-label="Carrossel de tecnologias"
+        >
+            <div className="tech-stack-track-wrapper">
+                <div className="tech-stack-track-group">
+                    {renderTechnologies()}
+                    {renderTechnologies(true)}
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function ProjectsGrid() {
     return (
         <section className="projects-section">
@@ -185,14 +219,7 @@ function ProjectsGrid() {
                     <h2 id="tech-stack-title">🚀 Tech Stack</h2>
                 </div>
 
-                <div className="tech-stack-list">
-                    {techStack.map((technology) => (
-                        <div className="tech-stack-item" key={technology.name} title={technology.name}>
-                            <span className="tech-stack-icon">{technology.icon}</span>
-                            <span className="tech-stack-name">{technology.name}</span>
-                        </div>
-                    ))}
-                </div>
+                <TechStackCarousel />
             </section>
 
             <section className="projects">
