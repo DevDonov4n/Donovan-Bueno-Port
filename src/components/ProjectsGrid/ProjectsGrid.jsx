@@ -44,6 +44,7 @@ const projects = [
         title: "BLOG - The Dev News",
         description: "Uma landing page para o portal The Dev News, desenvolvida com HTML e CSS. O objetivo deste projeto é apresentar as notícias do universo da programação de forma atrativa, informativa e responsiva.",
         images: [theDevNews, theDevNewsGif],
+        link: "https://github.com/DevDonov4n/RID-219930_Desafio2",
         technologies: [
             { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
@@ -54,6 +55,7 @@ const projects = [
         title: "Board de Tarefas",
         description: "Um projeto de board de tarefas desenvolvido com HTML, CSS e JavaScript, utilizando conceitos de Local Storage, mudança de estado e componentização.",
         images: [boardTarefas, boardTarefasGif],
+        link: "https://github.com/DevDonov4n/RID-219930_Desafio3",
         technologies: [
             { name: "JavaScript", icon: <DiJsBadge /> },
             { name: "HTML", icon: <FaHtml5 /> },
@@ -64,6 +66,7 @@ const projects = [
         title: "Landing Page ",
         description: "Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto montar a landing page com integração ao Sheet Monkey",
         images: [landingPage, landingPageGif],
+        link: "https://github.com/DevDonov4n/RID219930_Desafio01",
         technologies: [
             { name: "HTML", icon: <FaHtml5 /> },
             { name: "CSS", icon: <FaCss3Alt /> },
@@ -73,6 +76,7 @@ const projects = [
         title: "Portfólio Pessoal",
         description: "Portfólio pessoal desenvolvido para apresentar minha trajetória, habilidades e projetos na área de desenvolvimento de software, com uma interface moderna, responsiva e interativa.",
         images: [portfolio, portfolioDark],
+        link: "https://github.com/DevDonov4n/Donovan-Bueno-Port",
         technologies: [
             { name: "React", icon: <FaReact /> },
             { name: "JavaScript", icon: <DiJsBadge /> },
@@ -89,6 +93,7 @@ const projects = [
             jrLingeriesGif,
             jrLingeriesGif2
         ],
+        link: "https://github.com/DevDonov4n/jr-lingeries",
         building: true,
         technologies: [
             { name: "TypeScript", icon: <SiTypescript /> },
@@ -264,9 +269,14 @@ function ProjectsGrid() {
                                 ))}
                             </div>
 
-                            <button type="button" className="card-btn">
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="card-btn"
+                            >
                                 Ver Projeto <BsArrowUpRight />
-                            </button>
+                            </a>
                         </article>
                     ))}
                 </div>
