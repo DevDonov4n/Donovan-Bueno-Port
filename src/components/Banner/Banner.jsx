@@ -36,18 +36,31 @@ function Banner() {
             setPhraseIndex((current) => (current + 1) % phrases.length);
         }, 2600);
 
+        // O efeito de começar pelo verso e revelar a foto é exclusivo do mobile.
+        const mediaQuery = window.matchMedia("(max-width: 520px)");
+
         const handleScroll = () => {
-            const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-            const progress = Math.min(window.scrollY / maxScroll, 1);
-            setRotation(progress * 720);
+            if (!mediaQuery.matches) {
+                setRotation(0);
+                return;
+            }
+
+            // No celular, a moeda começa mostrando o verso (180°).
+            // Nos primeiros 500px de scroll ela gira 180° e revela a foto.
+            const progress = Math.min(window.scrollY / 500, 1);
+            setRotation(180 + progress * 180);
         };
 
+        const handleViewportChange = () => handleScroll();
+
         window.addEventListener("scroll", handleScroll, { passive: true });
+        mediaQuery.addEventListener("change", handleViewportChange);
         handleScroll();
 
         return () => {
             window.clearInterval(phraseTimer);
             window.removeEventListener("scroll", handleScroll);
+            mediaQuery.removeEventListener("change", handleViewportChange);
         };
     }, []);
 
