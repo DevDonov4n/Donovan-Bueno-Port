@@ -16,7 +16,8 @@ import boardTarefas from "../../assets/board-tarefas.png";
 import boardTarefasGif from "../../assets/board-tarefas-gif.gif";
 import landingPage from "../../assets/landing-page.png";
 import landingPageGif from "../../assets/landing-page.gif";
-import toDoList from "../../assets/to-do-list.png";
+import portfolio from "../../assets/portfolioWhite.png";
+import portfolioDark from "../../assets/portfolioDark.png";
 import jrlingeries from "../../assets/jr-lingeries.png";
 import jrLingeriesGif from "../../assets/jr-lingeries-gif.gif"
 import jrLingeriesGif2 from "../../assets/jr-lingeries-gif-2.gif"
@@ -64,6 +65,18 @@ const projects = [
         description: "Uma landing page para a instituição DNC, desenvolvida com HTML, CSS e JavaScript. O objetivo deste projeto montar a landing page com integração ao Sheet Monkey",
         images: [landingPage, landingPageGif],
         technologies: [
+            { name: "HTML", icon: <FaHtml5 /> },
+            { name: "CSS", icon: <FaCss3Alt /> },
+        ],
+    },
+    {
+        title: "Portfólio Pessoal",
+        description: "Portfólio pessoal desenvolvido para apresentar minha trajetória, habilidades e projetos na área de desenvolvimento de software, com uma interface moderna, responsiva e interativa.",
+        images: [portfolio, portfolioDark],
+        technologies: [
+            { name: "React", icon: <FaReact /> },
+            { name: "JavaScript", icon: <DiJsBadge /> },
+            { name: "TypeScript", icon: <SiTypescript /> },
             { name: "HTML", icon: <FaHtml5 /> },
             { name: "CSS", icon: <FaCss3Alt /> },
         ],

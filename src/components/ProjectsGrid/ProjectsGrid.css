@@ -166,6 +166,7 @@ body {
     align-items: center;
     gap: 8px;
     align-self: center;
+    padding: 0 10px;
 }
 
 .language-tag {
@@ -303,7 +304,8 @@ body {
     margin: 15px 15px 0 10px;
     font-size: 24px;
     font-weight: 700;
-    text-align: start;
+    text-align: center;
+    color: var(--primary);
 }
 
 .card-projects p {
