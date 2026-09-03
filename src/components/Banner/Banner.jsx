@@ -39,7 +39,7 @@ function Banner() {
         const handleScroll = () => {
             const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
             const progress = Math.min(window.scrollY / maxScroll, 1);
-            setRotation(progress * 540);
+            setRotation(progress * 720);
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
