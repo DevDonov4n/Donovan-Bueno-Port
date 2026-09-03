@@ -123,7 +123,7 @@ function Banner() {
                         </div>
                     </div>
 
-                    <div className="visual-label visual-label-top">REACT · JS · CSS</div>
+                    <div className="visual-label visual-label-top">REACT · JAVASCRIPT · TYPESCRIPT</div>
                     <div className="visual-label visual-label-bottom">FULL STACK IN PROGRESS</div>
                 </div>
             </div>
