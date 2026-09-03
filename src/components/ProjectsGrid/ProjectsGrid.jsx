@@ -18,6 +18,9 @@ import landingPage from "../../assets/landing-page.png";
 import landingPageGif from "../../assets/landing-page.gif";
 import toDoList from "../../assets/to-do-list.png";
 import jrlingeries from "../../assets/jr-lingeries.png";
+import jrLingeriesGif from "../../assets/jr-lingeries-gif.gif"
+import jrLingeriesGif2 from "../../assets/jr-lingeries-gif-2.gif"
+
 
 const techStack = [
     { name: "HTML5", icon: <FaHtml5 /> },
@@ -68,7 +71,11 @@ const projects = [
     {
         title: "JR Lingeries",
         description: "Um e-commerce de roupas íntimas com login para clientes e dashboard para o responsável acompanhar leads, estoque e renda mensal arrecadada.",
-        images: [jrlingeries],
+        images: [
+            jrlingeries,
+            jrLingeriesGif,
+            jrLingeriesGif2
+        ],
         building: true,
         technologies: [
             { name: "TypeScript", icon: <SiTypescript /> },
