@@ -30,15 +30,17 @@ const particles = [
 function Banner() {
     const [phraseIndex, setPhraseIndex] = useState(0);
     const [rotation, setRotation] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const phraseTimer = window.setInterval(() => {
             setPhraseIndex((current) => (current + 1) % phrases.length);
         }, 2600);
 
-        // O efeito de começar pelo verso e revelar a foto é exclusivo do mobile.
         const mediaQuery = window.matchMedia("(max-width: 520px)");
+        setIsMobile(mediaQuery.matches);
 
+        // O efeito de começar pelo verso e revelar a foto é exclusivo do mobile.
         const handleScroll = () => {
             if (!mediaQuery.matches) {
                 setRotation(0);
@@ -51,7 +53,10 @@ function Banner() {
             setRotation(180 + progress * 180);
         };
 
-        const handleViewportChange = () => handleScroll();
+        const handleViewportChange = () => {
+            setIsMobile(mediaQuery.matches);
+            handleScroll();
+        };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
         mediaQuery.addEventListener("change", handleViewportChange);
@@ -124,7 +129,10 @@ function Banner() {
 
                     <div
                         className="portrait-coin"
-                        style={{ transform: `rotateY(${rotation}deg)` }}
+                        style={{
+                            transform: `rotateY(${rotation}deg)`,
+                            ...(isMobile ? { width: "clamp(280px, 78vw, 390px)" } : {})
+                        }}
                     >
                         <div className="coin-face coin-front">
                             <div className="portrait-image" role="img" aria-label="Foto de Donovan Bueno" />
