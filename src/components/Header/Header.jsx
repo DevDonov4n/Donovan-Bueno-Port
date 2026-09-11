@@ -40,18 +40,7 @@ function Header() {
                 </nav>
 
                 <div className="btn-container">
-                    <button
-                        className="language-btn"
-                        onClick={toggleLanguage}
-                        aria-label={language === "pt" ? "Mudar idioma para inglês" : "Switch language to Portuguese"}
-                        title={language === "pt" ? "English" : "Português"}
-                    >
-                        <img
-                            src={language === "pt" ? eua : brasil}
-                            alt={language === "pt" ? "English" : "Português"}
-                        />
-                        <span>{language.toUpperCase()}</span>
-                    </button>
+                    
 
                     <button className="theme-btn" onClick={toggleTheme} aria-label="Alternar tema">
                         {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
