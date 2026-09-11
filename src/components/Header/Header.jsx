@@ -22,53 +22,31 @@ function Header() {
     }, []);
 
     const navigation = [
-        { to: "/", label: t.home },
-        { to: "/about", label: t.about },
-        { to: "/projects", label: t.projects },
-        { to: "/contact", label: t.contact },
+        { to: "/", label: t.nav.home },
+        { to: "/about", label: t.nav.about },
+        { to: "/projects", label: t.nav.projects },
+        { to: "/contact", label: t.nav.contact },
     ];
 
     return (
         <header className={scrolled ? "scrolled" : ""}>
             <h1>Donovan Bueno de Deus</h1>
-
             <nav className="desktop-nav">
                 {navigation.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}
-                <a href={resume} download="Donovan-Bueno-Curriculo.pdf" className="resume-link">
-                    <FiDownload /> {t.downloadResume}
-                </a>
+                <a href={resume} download="Donovan-Bueno-Curriculo.pdf" className="resume-link"><FiDownload /> {t.nav.downloadResume}</a>
             </nav>
-
             <div className="btn-container">
-                <button
-                    className="language-btn"
-                    onClick={toggleLanguage}
-                    aria-label={language === "pt" ? "Mudar idioma para inglês" : "Switch language to Portuguese"}
-                    title={language === "pt" ? "English" : "Português"}
-                >
-                    <span aria-hidden="true">{language === "pt" ? "🇺🇸" : "🇧🇷"}</span>
-                    <span>{language.toUpperCase()}</span>
+                <button className="language-btn" onClick={toggleLanguage} aria-label={language === "pt" ? "Mudar idioma para inglês" : "Switch language to Portuguese"} title={language === "pt" ? "English" : "Português"}>
+                    <span aria-hidden="true">{language === "pt" ? "🇺🇸" : "🇧🇷"}</span><span>{language.toUpperCase()}</span>
                 </button>
-
-                <button className="theme-btn" onClick={toggleTheme} aria-label="Alternar tema">
-                    {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
-                </button>
-
-                <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menu">
-                    {menuOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
-                </button>
+                <button className="theme-btn" onClick={toggleTheme} aria-label="Alternar tema">{theme === "dark" ? <MdLightMode /> : <MdDarkMode />}</button>
+                <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menu">{menuOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}</button>
             </div>
-
             <nav className={`mobile-nav ${menuOpen ? "active" : ""} ${scrolled ? "scrolled" : ""}`}>
-                {navigation.map((item) => (
-                    <Link key={item.to} onClick={() => setMenuOpen(false)} to={item.to}>{item.label}</Link>
-                ))}
-                <a href={resume} download="Donovan-Bueno-Curriculo.pdf" onClick={() => setMenuOpen(false)} className="mobile-resume-link">
-                    <FiDownload /> {t.downloadResume}
-                </a>
+                {navigation.map((item) => <Link key={item.to} onClick={() => setMenuOpen(false)} to={item.to}>{item.label}</Link>)}
+                <a href={resume} download="Donovan-Bueno-Curriculo.pdf" onClick={() => setMenuOpen(false)} className="mobile-resume-link"><FiDownload /> {t.nav.downloadResume}</a>
             </nav>
         </header>
     );
 }
-
 export default Header;
