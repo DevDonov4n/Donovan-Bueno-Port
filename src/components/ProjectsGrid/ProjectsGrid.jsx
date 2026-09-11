@@ -8,6 +8,9 @@ import { RiNextjsFill } from "react-icons/ri";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoConstruct } from "react-icons/io5";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { SiPrisma } from "react-icons/si";
+
+
 
 // ASSETS
 import theDevNews from "../../assets/the-dev-news.png";
@@ -98,7 +101,10 @@ const projects = [
         technologies: [
             { name: "TypeScript", icon: <SiTypescript /> },
             { name: "Next.js", icon: <RiNextjsFill /> },
-            { name: "PostgreSQL", icon: <SiPostgresql /> },
+            { name: "React", icon: <FaReact /> },
+            { name: "Prisma", icon: <SiPrisma /> },
+            { name: "MySQL", icon: <SiMysql /> },
+            { name: "Node.JS", icon: <FaNodeJs /> },
         ],
     },
 ];
