@@ -1,141 +1,86 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-
+import { FaFileDownload } from "react-icons/fa";
 import { useTheme } from "../../context/useTheme.js";
-
+import { useLanguage } from "../../context/useLanguage.js";
+import resume from "../../assets/curriculo.pdf";
+import brasil from "../../assets/brasil.png";
+import eua from "../../assets/eua.png";
 import "./Header.css";
 
 function Header() {
-
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-
     const { theme, toggleTheme } = useTheme();
-
+    const { language, toggleLanguage, t } = useLanguage();
 
     useEffect(() => {
-
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
-        };
-
+        const handleScroll = () => setScrolled(window.scrollY > 10);
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const navigation = [
+        { to: "/", label: t.nav.home },
+        { to: "/about", label: t.nav.about },
+        { to: "/projects", label: t.nav.projects },
+        { to: "/contact", label: t.nav.contact },
+    ];
 
     return (
-        <header className={scrolled ? "scrolled" : ""}>
+        <>
+            <header className={scrolled ? "scrolled" : ""}>
+                <h1>Donovan Bueno de Deus</h1>
 
-            <h1>
-                Donovan Bueno de Deus
-            </h1>
+                <nav className="desktop-nav">
+                    {navigation.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}
+                </nav>
 
+                <div className="btn-container">
+                    
 
-            {/* Menu Desktop */}
+                    <button className="theme-btn" onClick={toggleTheme} aria-label="Alternar tema">
+                        {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
+                    </button>
 
-            <nav className="desktop-nav">
+                    <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menu">
+                        {menuOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
+                    </button>
+                </div>
 
-                <Link to="/">
-                    Início
-                </Link>
+                <nav className={`mobile-nav ${menuOpen ? "active" : ""} ${scrolled ? "scrolled" : ""}`}>
+                    {navigation.map((item) => <Link key={item.to} onClick={() => setMenuOpen(false)} to={item.to}>{item.label}</Link>)}
+                </nav>
+            </header>
 
-                <Link to="/about">
-                    Sobre
-                </Link>
-
-                <Link to="/projects">
-                    Projetos
-                </Link>
-
-                <Link to="/contact">
-                    Contato
-                </Link>
-
-            </nav>
-
-            <div className="btn-container">
-                {/* Botão Dark / Light */}
-
+            <div className="floating-actions">
                 <button
-                    className="theme-btn"
-                    onClick={toggleTheme}
-                    aria-label="Alternar tema"
+                    className="language-floating-button"
+                    onClick={toggleLanguage}
+                    aria-label={language === "pt" ? "Mudar idioma para inglês" : "Switch language to Portuguese"}
+                    title={language === "pt" ? "English" : "Português"}
                 >
-
-                    {theme === "dark" ? (
-                        <MdLightMode />
-                    ) : (
-                        <MdDarkMode />
-                    )}
-
+                    <img
+                        src={language === "pt" ? eua : brasil}
+                        alt={language === "pt" ? "English" : "Português"}
+                    />
                 </button>
 
-
-                {/* Botão Mobile */}
-
-                <button
-                    className="menu-btn"
-                    onClick={() => setMenuOpen(!menuOpen)}
+                <a
+                    href={resume}
+                    download="Donovan-Bueno-Curriculo.pdf"
+                    className="resume-floating-button"
+                    aria-label={t.nav.downloadResume}
+                    title={t.nav.downloadResume}
                 >
-
-                    {menuOpen
-                        ? <IoClose />
-                        : <HiOutlineMenuAlt3 />
-                    }
-
-                </button>
+                    <FaFileDownload />
+                </a>
             </div>
-            
-
-
-            {/* Menu Mobile */}
-
-            <nav
-                className={`mobile-nav ${menuOpen ? "active" : ""} ${scrolled ? "scrolled" : ""}`}
-            >
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/"
-                >
-                    Início
-                </Link>
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/about"
-                >
-                    Sobre
-                </Link>
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/projects"
-                >
-                    Projetos
-                </Link>
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/contact"
-                >
-                    Contato
-                </Link>
-
-            </nav>
-
-        </header>
+        </>
     );
 }
-
 
 export default Header;
