@@ -1,141 +1,74 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-
+import { FiDownload } from "react-icons/fi";
 import { useTheme } from "../../context/useTheme.js";
-
+import { useLanguage } from "../../context/useLanguage.js";
+import resume from "../../assets/curriculo.pdf";
 import "./Header.css";
 
 function Header() {
-
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-
     const { theme, toggleTheme } = useTheme();
-
+    const { language, toggleLanguage, t } = useLanguage();
 
     useEffect(() => {
-
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
-        };
-
+        const handleScroll = () => setScrolled(window.scrollY > 10);
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const navigation = [
+        { to: "/", label: t.home },
+        { to: "/about", label: t.about },
+        { to: "/projects", label: t.projects },
+        { to: "/contact", label: t.contact },
+    ];
 
     return (
         <header className={scrolled ? "scrolled" : ""}>
-
-            <h1>
-                Donovan Bueno de Deus
-            </h1>
-
-
-            {/* Menu Desktop */}
+            <h1>Donovan Bueno de Deus</h1>
 
             <nav className="desktop-nav">
-
-                <Link to="/">
-                    Início
-                </Link>
-
-                <Link to="/about">
-                    Sobre
-                </Link>
-
-                <Link to="/projects">
-                    Projetos
-                </Link>
-
-                <Link to="/contact">
-                    Contato
-                </Link>
-
+                {navigation.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}
+                <a href={resume} download="Donovan-Bueno-Curriculo.pdf" className="resume-link">
+                    <FiDownload /> {t.downloadResume}
+                </a>
             </nav>
 
             <div className="btn-container">
-                {/* Botão Dark / Light */}
-
                 <button
-                    className="theme-btn"
-                    onClick={toggleTheme}
-                    aria-label="Alternar tema"
+                    className="language-btn"
+                    onClick={toggleLanguage}
+                    aria-label={language === "pt" ? "Mudar idioma para inglês" : "Switch language to Portuguese"}
+                    title={language === "pt" ? "English" : "Português"}
                 >
-
-                    {theme === "dark" ? (
-                        <MdLightMode />
-                    ) : (
-                        <MdDarkMode />
-                    )}
-
+                    <span aria-hidden="true">{language === "pt" ? "🇺🇸" : "🇧🇷"}</span>
+                    <span>{language.toUpperCase()}</span>
                 </button>
 
+                <button className="theme-btn" onClick={toggleTheme} aria-label="Alternar tema">
+                    {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
+                </button>
 
-                {/* Botão Mobile */}
-
-                <button
-                    className="menu-btn"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-
-                    {menuOpen
-                        ? <IoClose />
-                        : <HiOutlineMenuAlt3 />
-                    }
-
+                <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menu">
+                    {menuOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
                 </button>
             </div>
-            
 
-
-            {/* Menu Mobile */}
-
-            <nav
-                className={`mobile-nav ${menuOpen ? "active" : ""} ${scrolled ? "scrolled" : ""}`}
-            >
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/"
-                >
-                    Início
-                </Link>
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/about"
-                >
-                    Sobre
-                </Link>
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/projects"
-                >
-                    Projetos
-                </Link>
-
-                <Link
-                    onClick={() => setMenuOpen(false)}
-                    to="/contact"
-                >
-                    Contato
-                </Link>
-
+            <nav className={`mobile-nav ${menuOpen ? "active" : ""} ${scrolled ? "scrolled" : ""}`}>
+                {navigation.map((item) => (
+                    <Link key={item.to} onClick={() => setMenuOpen(false)} to={item.to}>{item.label}</Link>
+                ))}
+                <a href={resume} download="Donovan-Bueno-Curriculo.pdf" onClick={() => setMenuOpen(false)} className="mobile-resume-link">
+                    <FiDownload /> {t.downloadResume}
+                </a>
             </nav>
-
         </header>
     );
 }
-
 
 export default Header;
