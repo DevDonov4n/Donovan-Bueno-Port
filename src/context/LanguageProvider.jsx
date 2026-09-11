@@ -8,7 +8,6 @@ const translations = {
         projects: "Projetos",
         contact: "Contato",
         downloadResume: "Baixar currículo",
-        resumeFile: "/src/assets/curriculo.pdf",
     },
     en: {
         home: "Home",
@@ -16,14 +15,11 @@ const translations = {
         projects: "Projects",
         contact: "Contact",
         downloadResume: "Download resume",
-        resumeFile: "/src/assets/curriculo.pdf",
     },
 };
 
 export function LanguageProvider({ children }) {
-    const [language, setLanguage] = useState(() => {
-        return localStorage.getItem("language") || "pt";
-    });
+    const [language, setLanguage] = useState(() => localStorage.getItem("language") || "pt");
 
     useEffect(() => {
         localStorage.setItem("language", language);
@@ -34,13 +30,7 @@ export function LanguageProvider({ children }) {
     };
 
     return (
-        <LanguageContext.Provider
-            value={{
-                language,
-                toggleLanguage,
-                t: translations[language],
-            }}
-        >
+        <LanguageContext.Provider value={{ language, toggleLanguage, t: translations[language] }}>
             {children}
         </LanguageContext.Provider>
     );
