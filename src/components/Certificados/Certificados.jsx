@@ -5,7 +5,7 @@ import certificadoReactTypescript from "../../assets/Certificado-CERT-1789601473
 function Certificados() {
     const { language, t } = useLanguage();
     const certificates = language === "pt" ? [
-        { title: "React com Typescript", institution: "Instituto DNC", workload: "12 horas", date: "15/09/2026", image: "/Certificados/react-typescript.svg", pdf: certificadoReactTypescript },
+        { title: "React com Typescript", institution: "Instituto DNC", workload: "12 horas", date: "15/09/2026", image: "/Certificados/reactTS.png", pdf: "/Certificados/reactTS.pdf"  },
         { title: "React", institution: "Instituto DNC", workload: "10 horas", date: "04/04/2026", image: "/Certificados/react.png", pdf: "/Certificados/react.pdf" },
         { title: "Javascript Avançado", institution: "Instituto DNC", workload: "8 horas", date: "04/01/2026", image: "/Certificados/javascript-avancado.png", pdf: "/Certificados/javascript-avancado.pdf" },
         { title: "HTML e CSS", institution: "Instituto DNC", workload: "10 horas", date: "03/08/2025", image: "/Certificados/html-css.png", pdf: "/Certificados/html-css.pdf" },
