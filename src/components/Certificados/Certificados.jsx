@@ -9,7 +9,9 @@ function Certificados() {
         { title: "React", institution: "Instituto DNC", workload: "10 horas", date: "04/04/2026", image: "/Certificados/react.png", pdf: "/Certificados/react.pdf" },
         { title: "Javascript Avançado", institution: "Instituto DNC", workload: "8 horas", date: "04/01/2026", image: "/Certificados/javascript-avancado.png", pdf: "/Certificados/javascript-avancado.pdf" },
         { title: "HTML e CSS", institution: "Instituto DNC", workload: "10 horas", date: "03/08/2025", image: "/Certificados/html-css.png", pdf: "/Certificados/html-css.pdf" },
+        {title: "CAPACITA+: Construa com o Gemini", institution: "Google Cloud", workload: "2 horas", date: "25/09/2026", image: "/Certificados/Certificado-Capacita.png", pdf: "/Certificados/Certificado-Capacita.pdf"},
     ] : [
+        { title: "CAPACITA+: Build with Gemini", institution: "Google Cloud", workload: "2 hours", date: "25/09/2026", image: "/Certificados/Certificado-Capacita.png", pdf: "/Certificados/Certificado-Capacita.pdf" },
         { title: "React with TypeScript", institution: "DNC Institute", workload: "12 hours", date: "15/09/2026", image: "/Certificados/reactTS.png", pdf: "/Certificados/reactTS.pdf" },
         { title: "React", institution: "DNC Institute", workload: "10 hours", date: "04/04/2026", image: "/Certificados/react.png", pdf: "/Certificados/react.pdf" },
         { title: "Advanced JavaScript", institution: "DNC Institute", workload: "8 hours", date: "04/01/2026", image: "/Certificados/javascript-avancado.png", pdf: "/Certificados/javascript-avancado.pdf" },
