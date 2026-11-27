@@ -9,24 +9,40 @@ function Certificados() {
             institution: "Escola DNC",
             workload: language === "pt" ? "108 horas" : "108 hours",
             date: "27/10/2026",
-            image: "/Certificados/desenvolvedor-front-end.svg",
-            preview: "/Certificados/desenvolvedor-front-end.svg"
+            image: "/Certificados/front-end.png",
+            preview: "/Certificados/front-end.pdf"
+        },
+        {
+            title: language === "pt" ? "Nest e Next.js" : "Nest and Next.js",
+            institution: "Escola DNC",
+            workload: language === "pt" ? "24 horas" : "24 hours",
+            date: "26/11/2026",
+            image: "/Certificados/NEST-NEXT.png",
+            preview: "/Certificados/NEST-NEXT.pdf"
+        },
+        {
+            title: language === "pt" ? "Integração de API Rest com Nest.js" : "Integration of Rest API with Nest.js",
+            institution: "Escola DNC",
+            workload: language === "pt" ? "10 horas" : "10 hours",
+            date: "15/11/2026",
+            image: "/Certificados/API-REST-NEST.png",
+            preview: "/Certificados/API-REST-NEST.pdf"
         },
         {
             title: language === "pt" ? "Banco de dados: SQL e MongoDB" : "Database: SQL and MongoDB",
             institution: "Escola DNC",
             workload: language === "pt" ? "10 horas" : "10 hours",
             date: "15/11/2026",
-            image: "/Certificados/sql-mongodb.svg",
-            preview: "/Certificados/sql-mongodb.svg"
+            image: "/Certificados/SQL-MONGO.png",
+            preview: "/Certificados/SQL-MONGO.pdf"
         },
         {
             title: language === "pt" ? "Fundamentos de Node.js" : "Node.js Fundamentals",
             institution: "Escola DNC",
             workload: language === "pt" ? "14 horas" : "14 hours",
             date: "27/10/2026",
-            image: "/Certificados/nodejs-fundamentos.svg",
-            preview: "/Certificados/nodejs-fundamentos.svg"
+            image: "/Certificados/node-js.png",
+            preview: "/Certificados/node-js.pdf"
         },
         {
             title: "React com TypeScript",
@@ -74,7 +90,7 @@ function Certificados() {
         <section className="certificates">
             <div className="certificates-title"><h2>{t.about.certificates}</h2></div>
             <div className="certificates-grid">
-                {certificates.map((certificate, index) => (
+                {certificates.map((certificate) => (
                     <article className="certificate-card" key={certificate.title}>
                         <div className="certificate-image">
                             <img src={certificate.image} alt={`${certificate.title} certificate`} />
