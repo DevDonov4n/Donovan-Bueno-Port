@@ -24,7 +24,7 @@ function Certificados() {
             title: language === "pt" ? "Integração de API Rest com Nest.js" : "Integration of Rest API with Nest.js",
             institution: "Escola DNC",
             workload: language === "pt" ? "10 horas" : "10 hours",
-            date: "15/11/2026",
+            date: "25/11/2026",
             image: "/Certificados/API-REST-NEST.png",
             preview: "/Certificados/API-REST-NEST.pdf"
         },
